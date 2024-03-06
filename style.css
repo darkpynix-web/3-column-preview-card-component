@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+:root {
+  --Bright-Orange: hsl(31, 77%, 52%);
+  --Dark-Cyan: hsl(184, 100%, 22%);
+  --Very-Dark-Cyan: hsl(179, 100%, 13%);
+  --Trasparent-white-Parag: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray-bg-hdg-btn: hsl(0, 0%, 95%);
+  --font-family-1: "Big Shoulders Display", sans-serif;
+  --font-family-2: "Lexend Deca", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Very-light-gray-bg-hdg-btn);
+  min-height: 100vh;
+  width: 100vh;
+}
+
+.main-con {
+  display: flex;
+  min-height: 50%;
+  width: 75%;
+}
+
+.main-con .sedans {
+  width: 33.5%;
+  background: var(--Bright-Orange);
+}
+.main-con .suvs {
+  width: 33.5%;
+  background: var(--Dark-Cyan);
+}
+.main-con .luxury {
+  width: 33.5%;
+  background: var(--Very-Dark-Cyan);
+}
+
+.main-con .sedans img,
+.suvs img,
+.luxury img {
+  margin-left: 20px;
+  margin-top: 30px;
+  width: 40px;
+  height: 20px;
+}
+
+.main-con .sedans h1,
+.suvs h1,
+.luxury h1 {
+  color: var(--Very-light-gray-bg-hdg-btn);
+  font-family: var(--font-family-1);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+.main-con .sedans p,
+.suvs p,
+.luxury p {
+  color: var(--Trasparent-white-Parag);
+  font-family: var(--font-family-2);
+  font-size: 12px;
+  line-height: 20px;
+  margin-left: 30px;
+  margin-top: 20px;
+  font-weight: 400;
+}
+
+.main-con .sedans button,
+.suvs button,
+.luxury button {
+  cursor: pointer;
+  height: 40px;
+  width: 50%;
+  margin: 70px 30px;
+  font-size: 14px;
+  border-radius: 50px;
+  background-color: var(--Very-light-gray-bg-hdg-btn);
+  border: none;
+}
+
+.sedans button {
+  color: var(--Bright-Orange);
+  font-family: var(--font-family-2);
+}
+
+.sedans button:active {
+  background-color: transparent;
+  border: 2px solid var(--Trasparent-white-Parag);
+  color: var(--Trasparent-white-Parag);
+}
+
+.suvs button {
+  color: var(--Dark-Cyan);
+  font-family: var(--font-family-2);
+}
+
+.suvs button:active {
+  background-color: transparent;
+  border: 2px solid var(--Trasparent-white-Parag);
+  color: var(--Trasparent-white-Parag);
+}
+
+.luxury button {
+  color: var(--Very-Dark-Cyan);
+  font-family: var(--font-family-2);
+}
+
+.luxury button:active {
+  background-color: transparent;
+  border: 2px solid var(--Trasparent-white-Parag);
+  color: var(--Trasparent-white-Parag);
+}
+
+.main-con .sedans {
+  border-radius: 10px 0 0 10px;
+}
+
+.main-con .luxury {
+  border-radius: 0 10px 10px 0;
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100v;
+    width: 100vh;
+  }
+
+  .main-con {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
